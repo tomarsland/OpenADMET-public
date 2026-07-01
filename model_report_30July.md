@@ -2,12 +2,12 @@
 **Track:** Activity Prediction (pEC50)  
 **Date:** 30 June 2026 
 
-**First draft of model report: more to come!**
+*First draft of model report: more to come!*
 
 
 ## 1. Overview
 
-Our submission is based on Chemprop v2, a directed message-passing neural network (D-MPNN) widely used for molecular property prediction. We took a multi-task approach and trained a shared encoder to simultaneously predict multiple PXR-related endpoints. The intuition is that the auxiliary tasks provide regularising signal that helps the model learn better molecular representations for the primary pEC50 prediction task via a feed forward nerual network.
+Our submission is based on Chemprop v2, a directed message-passing neural network (D-MPNN). We took a multi-task approach and trained a shared encoder to simultaneously predict multiple PXR-related endpoints. The intuition is that the auxiliary tasks provide regularising signal that helps the model learn better molecular representations for the primary pEC50 prediction task via a feed forward nerual network.
 
 ## 2. Model Architecture
 
