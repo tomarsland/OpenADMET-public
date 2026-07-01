@@ -1,6 +1,9 @@
 # Model Report — OpenADMET PXR Blind Challenge 
-**Track:** Activity Prediction (pEC50)
+**Track:** Activity Prediction (pEC50)  
 **Date:** 30 June 2026 
+
+**First draft of model report: more to come!**
+
 
 ## 1. Overview
 
@@ -23,8 +26,6 @@ We used all available OpenADMET assay data as training tasks:
 
 All nine tasks share the same molecular encoder. The model handles missing labels naturally through NaN masking, so compounds that only appear in a subset of tasks still contribute to training.
 
----
-
 ## 4. Training Procedure
 
 Model development used 5-fold stratified scaffold cross-validation throughout. In phase 1, we used a random cross-validation split to guide model development. In phase 2, we switched to stratified scaffold split with an additional recreated phase 1 leaderboard using the unblinded analogue set 1. We found the recreaetd leaderboard to be very noisy so relied more on our 5-fold CV.  
@@ -36,4 +37,4 @@ Training used a cosine decay learning rate schedule. Compounds flagged as censor
 
 The final models were trained on 100% of available data.
 
-We trained 5 independent replicates with different random seeds and averaged the predictions across all replicates for the final submission. Our hope is that this ensemble approach reduces variance from individual training runs. 
+We trained 3 independent replicates with different random seeds and averaged the predictions across all replicates for the final submission. Our hope is that this ensemble approach reduces variance from individual training runs. 
