@@ -38,7 +38,7 @@ Training dynamics improved considerably when multitask training data was convert
 This allowed gradient updates to be somewhat decoupled, providing (we hypothesise) more task-specific model updates during backprop. 
 We achieved a notable drop in validation loss and performance when implementing this training technique:   
 
-![Uncoupling training](images/uncoupled_training.png)  
+![Uncoupling training](images/uncoupled_training1.png)  
 
 ## 6. Our submission
 Our final submission was our multitask model as described above with all the OpenADMET PXR challenge data aside from htchem_pec50 and oa_semipure_pec50 (7 tasks total), it included analogue test set 1 in the training data and was trained 5-fold CV. 
