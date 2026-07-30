@@ -53,6 +53,6 @@ It incorporated task uncoupling and loss weighting using confidence interval dat
   
 This model (would have) achieved a rank of 15th (10th without proprietary data).      
   
-*paper to come**
+*paper to come*
 
 
