@@ -1,6 +1,6 @@
 # Model Report — OpenADMET PXR Blind Challenge 
 **Track:** Activity Prediction (pEC50)  
-**Date:** 30 June 2026 
+**Date:** 30 June 2026     
 **Updated:*** 30 August 2026
 
 *First draft of model report: more to come!*
@@ -47,5 +47,8 @@ Selecting a model at the end of the challenge proved difficult. We were choosing
 With the release of analogue test set 2, we were able to identify our best model and where it would have placed. Our best model was trained on 100% of available challenge data (9 tasks), no public data was used nor any pretraining. 
 It incorporated task uncoupling and loss weighting using confidence interval data provided in by OpenADMET for many tasks. With this model, we knew that taking the final checkpoint (500 epochs) resulted in stronger performance.   
   
-This model (would have) achieved a rank of 15th (10th without proprietary data).  
+This model (would have) achieved a rank of 15th (10th without proprietary data).      
+  
+*paper to come**
+
 
