@@ -35,8 +35,14 @@ Training used a cosine decay learning rate schedule. Compounds flagged as censor
 ## 5. Task uncoupling 
 Training dynamics improved considerably when multitask training data was converted to long format, where each sample shown to the model was for a single task, even if multiple tasks existed for that drug. This allowed gradient updates to be somewhat decoupled, providing (we hypothesise) more task-specific model updates during backprop. We achieved a notable drop in validation loss and performance when implementing this training technique.  
 
-## 6. Final Submission
+## 6. Our submission
+Our final submission was our multitask model as described above with all the OpenADMET PXR challenge data aside from htchem_pec50 and oa_semipure_pec50 (7 tasks total), it included analogue test set 1 in the training data and was trained 5-fold CV. 
+We trained 3 independent replicates with different random seeds, took the best val checkpoint, and averaged the predictions across all replicates for the final submission. Our hope is that this ensemble approach reduces variance from individual training runs, which we found to be substantial given the small test set.  
+This model achieved a rank of 60th (54th without proprietary data). 
 
-The final models were trained on 100% of available data.
+## 7. Other model
+Selecting a model at the end of the challenge proved difficult. We were choosing between 3 models to submit and unfortunately picked the worst! With the release of analogue test set 2, we were able to identify our best model and where it would have placed:   
 
-We trained 3 independent replicates with different random seeds and averaged the predictions across all replicates for the final submission. Our hope is that this ensemble approach reduces variance from individual training runs. 
+Our best model was trained on 100% of available challenge data (9 tasks), no public data was used nor any pretraining. It incorporated task uncoupling and loss weighting using confidence interval data provided in by OpenADMET for many tasks. With this model, we knew that taking the final checkpoint (500 epochs) resulted in stronger performance. 
+This model (would have) achieved a rank of 15th (10th without proprietary data)
+
