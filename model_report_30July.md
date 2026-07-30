@@ -1,6 +1,7 @@
 # Model Report — OpenADMET PXR Blind Challenge 
 **Track:** Activity Prediction (pEC50)  
 **Date:** 30 June 2026 
+**Updated:*** 30 August 2026
 
 *First draft of model report: more to come!*
 
@@ -37,12 +38,14 @@ Training dynamics improved considerably when multitask training data was convert
 
 ## 6. Our submission
 Our final submission was our multitask model as described above with all the OpenADMET PXR challenge data aside from htchem_pec50 and oa_semipure_pec50 (7 tasks total), it included analogue test set 1 in the training data and was trained 5-fold CV. 
-We trained 3 independent replicates with different random seeds, took the best val checkpoint, and averaged the predictions across all replicates for the final submission. Our hope is that this ensemble approach reduces variance from individual training runs, which we found to be substantial given the small test set.  
+We trained 3 independent replicates with different random seeds, took the best val checkpoint, and averaged the predictions across all replicates for the final submission. Our hope is that this ensemble approach reduces variance from individual training runs, which we found to be substantial given the small test set.    
+  
 This model achieved a rank of 60th (54th without proprietary data). 
 
 ## 7. Other model
-Selecting a model at the end of the challenge proved difficult. We were choosing between 3 models to submit and unfortunately picked the worst! With the release of analogue test set 2, we were able to identify our best model and where it would have placed:   
-
-Our best model was trained on 100% of available challenge data (9 tasks), no public data was used nor any pretraining. It incorporated task uncoupling and loss weighting using confidence interval data provided in by OpenADMET for many tasks. With this model, we knew that taking the final checkpoint (500 epochs) resulted in stronger performance. 
-This model (would have) achieved a rank of 15th (10th without proprietary data)
+Selecting a model at the end of the challenge proved difficult. We were choosing between 3 models to submit and unfortunately picked the worst! 
+With the release of analogue test set 2, we were able to identify our best model and where it would have placed. Our best model was trained on 100% of available challenge data (9 tasks), no public data was used nor any pretraining. 
+It incorporated task uncoupling and loss weighting using confidence interval data provided in by OpenADMET for many tasks. With this model, we knew that taking the final checkpoint (500 epochs) resulted in stronger performance.   
+  
+This model (would have) achieved a rank of 15th (10th without proprietary data).  
 
