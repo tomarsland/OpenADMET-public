@@ -32,6 +32,8 @@ Model development used 5-fold stratified scaffold cross-validation throughout. I
 
 Training used a cosine decay learning rate schedule. Compounds flagged as censored were excluded from training. Internal cross validation and recreated leaderboard metrics for MAE, RAE, R2, Spearman, and Kendall's tau were collectively used for model development decision making. 
 
+## 5. Task uncoupling 
+Training dynamics improved considerably when multitask training data was converted to long format, where each sample shown to the model was for a single task, even if multiple tasks existed for that drug. This allowed gradient updates to be somewhat decoupled, providing (we hypothesise) more task-specific model updates during backprop. We achieved a notable drop in validation loss and performance when implementing this training technique.  
 
 ## 6. Final Submission
 
