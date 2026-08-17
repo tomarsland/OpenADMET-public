@@ -1,10 +1,4 @@
-# Model Report — OpenADMET PXR Blind Challenge 
-**Track:** Activity Prediction (pEC50)  
-**Date:** 30 June 2026     
-**Updated:** 30 August 2026
-
-*First draft of model report: more to come!*
-
+# Task decoupled, multitask D-MPNN to predict PXR activity 
 
 ## 1. Overview
 
